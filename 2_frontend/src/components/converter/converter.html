@@ -1,0 +1,77 @@
+<div class="converter-container">
+  @if (store.loading()) {
+    <div class="loader">Загрузка курсов ЦБ...</div>
+  } @else if (store.error()) {
+    <div class="error-badge">{{ store.error() }}</div>
+  } @else {
+    <div class="converter-card">
+      <header class="converter-header">
+        <h1>Конвертер валют</h1>
+        <p class="subtitle">По официальному курсу ЦБ РФ</p>
+      </header>
+
+      <!-- Главная интерактивная зона (Инпут слева, Селект справа) -->
+      <div class="input-group-row">
+        <div class="input-wrapper">
+          <label for="rubInput">Отдаете</label>
+          <div class="field-container">
+            <input
+              id="rubInput"
+              type="number"
+              placeholder="0.00"
+              [value]="store.rubAmount()"
+              (input)="onRubInput($event)"
+              min="0"
+            />
+            <span class="currency-tag">RUB</span>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="currencySelect">Получаете</label>
+          <div class="field-container">
+            <select id="currencySelect" [(ngModel)]="currencyValue">
+              @for (rate of store.rates(); track rate.code) {
+                <option [value]="rate.code">{{ rate.code }} — {{ rate.name }}</option>
+              }
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Зона вывода результата -->
+      <div class="result-section" [class.has-value]="(store.rubAmount() ?? 0) > 0">
+        <div class="result-label">Итого к получению</div>
+        <div class="result-value">
+          {{ store.convertedAmount() | number:'1.2-2' }} <span>{{ store.selectedCurrencyCode() }}</span>
+        </div>
+
+        @if (store.selectedCurrency(); as activeCurrency) {
+          <div class="rate-info">
+            Курс: {{ activeCurrency.nominal }} {{ activeCurrency.code }} = {{ activeCurrency.value | currency: 'RUB' :'symbol' }}
+            <span class="update-time">ЦБ РФ от {{ activeCurrency.updatedAt | date:'dd.MM.yyyy HH:mm' }}</span>
+          </div>
+        }
+      </div>
+      <!-- Секция последних запросов (История) -->
+      <div class="history-section">
+        <h3>Последние 10 запросов валют</h3>
+
+        @if (store.history().length === 0) {
+          <p class="no-history">История запросов пуста</p>
+        } @else {
+          <ul class="history-list">
+            @for (log of store.history(); track log._id) {
+              <li class="history-item">
+                <span class="history-time">{{ log.timestamp | date:'HH:mm:ss (dd.MM)' }}</span>
+                <span class="history-direction">
+                  {{ log.fromCurrency }} <span class="arrow">→</span> <strong>{{ log.toCurrency }}</strong>
+                </span>
+              </li>
+            }
+          </ul>
+        }
+      </div>
+    </div>
+  }
+</div>

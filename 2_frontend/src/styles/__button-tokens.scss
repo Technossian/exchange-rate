@@ -1,0 +1,35 @@
+:root[data-theme='light'],[data-theme='light'] {
+  --button-primary: var(--blue-60);
+  --button-primary-hover: var(--blue-70);
+  --button-primary-active: var(--blue-80);
+  --button-secondary: var(--gray-60);
+  --button-secondary-hover: var(--gray-70);
+  --button-secondary-active: var(--gray-80);
+  --button-success: var(--green-60);
+  --button-success-hover: var(--green-70);
+  --button-success-active: var(--green-80);
+  --button-warning: var(--orange-60);
+  --button-warning-hover: var(--orange-70);
+  --button-warning-active: var(--orange-80);
+  --button-error: var(--red-60);
+  --button-error-hover: var(--red-70);
+  --button-error-active: var(--red-80);
+}
+
+:root[data-theme='dark'],[data-theme='dark'] {
+  --button-primary: var(--blue-60);
+  --button-primary-hover: var(--blue-50);
+  --button-primary-active: var(--blue-40);
+  --button-secondary: var(--gray-60);
+  --button-secondary-hover: var(--gray-50);
+  --button-secondary-active: var(--gray-40);
+  --button-success: var(--green-60);
+  --button-success-hover: var(--green-50);
+  --button-success-active: var(--green-40);
+  --button-warning: var(--orange-60);
+  --button-warning-hover: var(--orange-50);
+  --button-warning-active: var(--orange-40);
+  --button-error: var(--red-60);
+  --button-error-hover: var(--red-50);
+  --button-error-active: var(--red-40);
+}

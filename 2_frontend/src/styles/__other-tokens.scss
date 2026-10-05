@@ -1,0 +1,27 @@
+:root {
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.45s ease;
+
+  --backdrop-soft: blur(8px) saturate(105%);
+  --backdrop-medium: blur(14px) saturate(110%);
+  --backdrop-hard: blur(18px) saturate(120%);
+}
+
+:root[data-theme="light"][data-theme="light"] {
+  --white: #FFFFFF;
+  --black: #000000;
+  --tooltip-bg-color: var(--background);
+  --dropzone-background: var(--surface);
+  --dropzone-background-hover: var(--blue-10);
+
+}
+
+:root[data-theme="dark"][data-theme="dark"] {
+  --white: #FFFFFF;
+  --black: #000000;
+  --tooltip-bg-color: var(--background);
+  --dropzone-background: var(--surface);
+  --dropzone-background-hover: var(--blue-100);
+
+}

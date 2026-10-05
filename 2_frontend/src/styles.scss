@@ -1,0 +1,170 @@
+
+@use "styles/__theme";
+@use "styles/__color-palette";
+@use "styles/__reset";
+//@use "_variables";
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  transition: background var(--transition-base);
+
+  &::selection {
+    background-color: var(--blue-30);
+    //color: red;
+  }
+
+  /* For Firefox compatibility */
+  &::-moz-selection {
+    background-color: var(--background-brand);
+    //color: red;
+  }
+
+  &::selection {
+    background-color: var(--selection-brand);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: var(--text-body-medium);
+  background-color: var(--background-gray);
+  background-image: var(--wallpaper);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100dvh;
+  color: var(--text-primary);
+
+  transition: background var(--transition-base);
+}
+
+h1 {
+  font: var(--text-display-small);
+}
+
+h2 {
+  font: var(--text-headline-large);
+}
+
+h3 {
+  font: var(--text-headline-medium);
+}
+
+h4 {
+  font: var(--text-title-large);
+}
+
+h5 {
+  font: var(--text-title-medium);
+}
+
+h6 {
+  font: var(--text-title-small);
+}
+
+p {
+  font: var(--text-paragraph-medium);
+}
+
+small {
+  font: var(--text-caption);
+}
+
+button {
+  font: var(--text-button);
+}
+
+.link {
+  color: var(--button-primary);
+
+  &:hover {
+    color: var(--button-primary-hover);
+  }
+
+  &:active {
+    color: var(--button-primary-active);
+  }
+}
+
+/* Global scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--background-brand) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--background-brand) 85%, transparent);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--background-brand) 100%, transparent);
+  background-clip: padding-box;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: var(--font-family-typography, var(--font-family-base));
+}
+
+/* appGlass + CDK overlay integration */
+.cdk-overlay-container.app-glass-overlay .cdk-overlay-pane.glass-overlay-panel {
+  background: var(--app-glass-bg, var(--transparent-bg));
+  backdrop-filter: var(--app-glass-backdrop, var(--backdrop-soft));
+  -webkit-backdrop-filter: var(--app-glass-backdrop, var(--backdrop-soft));
+  border-radius: var(--radius-lg);
+}
+
+
+.anim-enter {
+  animation: enter .5s ease both;
+}
+
+.anim-leave {
+  animation: leave 0.5s ease both;
+}
+
+@keyframes enter {
+  from {opacity: 0; transform: translateX(100%);}
+  to {opacity: 1; transform: translateX(0);}
+}
+
+@keyframes leave {
+  from {opacity: 1; transform: translateX(0);}
+  to {opacity: 0; transform: translateX(100%);}
+}
+
+
+.anim-transform-enter {
+  animation: transform-enter .5s ease both;
+}
+
+.anim-transform-leave {
+  animation: transform-leave .5s ease both;
+}
+
+@keyframes transform-enter {
+  from {transform: translateX(110%);}
+  to {transform: translateX(0);}
+}
+
+@keyframes transform-leave {
+  from {transform: translateX(0);}
+  to {transform: translateX(110%);}
+}

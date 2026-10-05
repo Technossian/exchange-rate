@@ -1,0 +1,25 @@
+:root[data-theme='light'],[data-theme='light'] {
+  /* Text tokens */
+  --text-primary: var(--gray-100);
+  --text-secondary: var(--gray-60);
+  --text-tertiary: var(--gray-40);
+  --text-on-color: var(--white);
+  --text-brand: var(--blue-60);
+  --text-success: var(--green-60);
+  --text-warning: var(--orange-60);
+  --text-error: var(--red-60);
+  --text-inverted: var(--white);
+}
+
+:root[data-theme='dark'],[data-theme='dark'] {
+  /* Text tokens */
+  --text-primary: var(--white);
+  --text-secondary: var(--gray-60);
+  --text-tertiary: var(--gray-80);
+  --text-on-color: var(--white);
+  --text-brand: var(--blue-60);
+  --text-success: var(--green-60);
+  --text-warning: var(--orange-50);
+  --text-error: var(--red-50);
+  --text-inverted: var(--gray-100);
+}

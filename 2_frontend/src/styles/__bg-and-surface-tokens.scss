@@ -1,0 +1,33 @@
+:root[data-theme='light'],[data-theme='light'] {
+  --background: var(--white);
+  --background-gray: var(--gray-10);
+  --background-brand: var(--blue-60);
+  --background-overlay: rgba(0, 0, 0, 0.65);
+  --surface: var(--white);
+  --surface-gray: var(--gray-10);
+  --border: var(--gray-30);
+  --border-brand: var(--text-brand);
+  --border-neutral: var(--text-secondary);
+  --border-neutral-subtle: color-mix(in srgb, var(--text-secondary) 20%, transparent);
+  --border-success: var(--text-success);
+  --border-warning: var(--text-warning);
+  --border-error: var(--text-error);
+  --selection-brand: var(--blue-30);
+}
+
+:root[data-theme='dark'],[data-theme='dark'] {
+  --background: var(--gray-100);
+  --background-gray: var(--gray-90);
+  --background-brand: var(--blue-60);
+  --background-overlay: rgba(0, 0, 0, 0.65);
+  --surface: var(--gray-100);
+  --surface-gray: var(--gray-90);
+  --border: var(--gray-80);
+  --border-brand: var(--text-brand);
+  --border-neutral: var(--text-secondary);
+  --border-neutral-subtle: color-mix(in srgb, var(--text-secondary) 20%, transparent);
+  --border-success: var(--text-success);
+  --border-warning: var(--text-warning);
+  --border-error: var(--text-error);
+  --selection-brand: var(--blue-60);
+}

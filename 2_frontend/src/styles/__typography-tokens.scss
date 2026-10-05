@@ -1,0 +1,93 @@
+﻿:root {
+  --font-family-typography: Roboto, "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --text-display-large-size: 3.5rem;
+  --text-display-large-weight: 600;
+  --text-display-large-line-height: 4rem;
+  --text-display-large: var(--text-display-large-weight) var(--text-display-large-size) / var(--text-display-large-line-height) var(--font-family-typography);
+
+  --text-display-medium-size: 3rem;
+  --text-display-medium-weight: 600;
+  --text-display-medium-line-height: 3.5rem;
+  --text-display-medium: var(--text-display-medium-weight) var(--text-display-medium-size) / var(--text-display-medium-line-height) var(--font-family-typography);
+
+  --text-display-small-size: 2.5rem;
+  --text-display-small-weight: 600;
+  --text-display-small-line-height: 3rem;
+  --text-display-small: var(--text-display-small-weight) var(--text-display-small-size) / var(--text-display-small-line-height) var(--font-family-typography);
+
+  --text-headline-large-size: 2rem;
+  --text-headline-large-weight: 600;
+  --text-headline-large-line-height: 2.5rem;
+  --text-headline-large: var(--text-headline-large-weight) var(--text-headline-large-size) / var(--text-headline-large-line-height) var(--font-family-typography);
+
+  --text-headline-medium-size: 1.75rem;
+  --text-headline-medium-weight: 600;
+  --text-headline-medium-line-height: 2.25rem;
+  --text-headline-medium: var(--text-headline-medium-weight) var(--text-headline-medium-size) / var(--text-headline-medium-line-height) var(--font-family-typography);
+
+  --text-headline-small-size: 1.5rem;
+  --text-headline-small-weight: 600;
+  --text-headline-small-line-height: 2rem;
+  --text-headline-small: var(--text-headline-small-weight) var(--text-headline-small-size) / var(--text-headline-small-line-height) var(--font-family-typography);
+
+  --text-title-large-size: 1.375rem;
+  --text-title-large-weight: 600;
+  --text-title-large-line-height: 1.75rem;
+  --text-title-large: var(--text-title-large-weight) var(--text-title-large-size) / var(--text-title-large-line-height) var(--font-family-typography);
+
+  --text-title-medium-size: 1.25rem;
+  --text-title-medium-weight: 600;
+  --text-title-medium-line-height: 1.625rem;
+  --text-title-medium: var(--text-title-medium-weight) var(--text-title-medium-size) / var(--text-title-medium-line-height) var(--font-family-typography);
+
+  --text-title-small-size: 1.125rem;
+  --text-title-small-weight: 600;
+  --text-title-small-line-height: 1.5rem;
+  --text-title-small: var(--text-title-small-weight) var(--text-title-small-size) / var(--text-title-small-line-height) var(--font-family-typography);
+
+  --text-body-large-size: 1.125rem;
+  --text-body-large-weight: 400;
+  --text-body-large-line-height: 1.5rem;
+  --text-body-large: var(--text-body-large-weight) var(--text-body-large-size) / var(--text-body-large-line-height) var(--font-family-typography);
+
+  --text-body-medium-size: 1rem;
+  --text-body-medium-weight: 400;
+  --text-body-medium-line-height: 1.5rem;
+  --text-body-medium: var(--text-body-medium-weight) var(--text-body-medium-size) / var(--text-body-medium-line-height) var(--font-family-typography);
+
+  --text-body-small-size: 0.875rem;
+  --text-body-small-weight: 400;
+  --text-body-small-line-height: 1.25rem;
+  --text-body-small: var(--text-body-small-weight) var(--text-body-small-size) / var(--text-body-small-line-height) var(--font-family-typography);
+
+  --text-paragraph-large-size: 1.125rem;
+  --text-paragraph-large-weight: 400;
+  --text-paragraph-large-line-height: 1.5rem;
+  --text-paragraph-large: var(--text-paragraph-large-weight) var(--text-paragraph-large-size) / var(--text-paragraph-large-line-height) var(--font-family-typography);
+
+  --text-paragraph-medium-size: 1rem;
+  --text-paragraph-medium-weight: 400;
+  --text-paragraph-medium-line-height: 1.5rem;
+  --text-paragraph-medium: var(--text-paragraph-medium-weight) var(--text-paragraph-medium-size) / var(--text-paragraph-medium-line-height) var(--font-family-typography);
+
+  --text-paragraph-small-size: 0.875rem;
+  --text-paragraph-small-weight: 400;
+  --text-paragraph-small-line-height: 1.25rem;
+  --text-paragraph-small: var(--text-paragraph-small-weight) var(--text-paragraph-small-size) / var(--text-paragraph-small-line-height) var(--font-family-typography);
+
+  --text-button-size: 0.875rem;
+  --text-button-weight: 500;
+  --text-button-line-height: 1.25rem;
+  --text-button: var(--text-button-weight) var(--text-button-size) / var(--text-button-line-height) var(--font-family-typography);
+
+  --text-caption-size: 0.75rem;
+  --text-caption-weight: 400;
+  --text-caption-line-height: 1rem;
+  --text-caption: var(--text-caption-weight) var(--text-caption-size) / var(--text-caption-line-height) var(--font-family-typography);
+
+  --text-underline-size: 0.625rem;
+  --text-underline-weight: 400;
+  --text-underline-line-height: 0.875rem;
+  --text-underline: var(--text-underline-weight) var(--text-underline-size) / var(--text-underline-line-height) var(--font-family-typography);
+}
